@@ -1,0 +1,21 @@
+{
+  "name": "web3.0",
+  "version": "1.0.0",
+  "description": "Krypt - Web 3.0 Blockchain Application",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script":"cd client/ && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeWithSouma/Krypt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeWithSouma/Krypt/issues"
+  },
+  "homepage": "https://github.com/CodeWithSouma/Krypt#readme"
+}
