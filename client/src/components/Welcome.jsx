@@ -23,7 +23,7 @@ const Input = ({placeholder,name, type, value, handelChange}) => (
 
 
 const Welcome = () => {
-  const { connectWallet, currentAccount, formData, setFormData, handelChange, sendTransaction } = useContext(TransactionContext);
+  const { connectWallet, currentAccount, formData, setFormData, handelChange, sendTransaction,isLoading } = useContext(TransactionContext);
   
 
   const handelSubmit = (e) => {
@@ -83,7 +83,7 @@ const Welcome = () => {
                 <BsInfoCircle fontSize={17} color="#fff" />
               </div>
               <div>
-                <p className="text-white font-light text-sm">{shortenAddress(currentAccount)}</p>
+                <p className="text-white font-light text-sm">{currentAccount ? shortenAddress(currentAccount) : 'Account'}</p>
                 <p className="text-white font-semibold text-lg mt-1">
                   Ethereum
                 </p>
@@ -98,7 +98,7 @@ const Welcome = () => {
 
             <div className="h-[1px] w-full bg-gray-400 my-2"/>
 
-            {false ? (
+            {isLoading ? (
                 <Loader/>
             ) : (
                <button type="button" onClick={handelSubmit} className="text-white w-full mt-2 border-[1px] p-2 border-[#3d4f7c]
