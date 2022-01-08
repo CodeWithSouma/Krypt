@@ -95,6 +95,7 @@ export const TransactionsProvider = ({ children }) => {
         method: "eth_requestAccounts",
       });
       setCurrentAccount(accounts[0]);
+      window.location.reload();
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object.");
@@ -134,6 +135,7 @@ export const TransactionsProvider = ({ children }) => {
 
       const transactionCount = await transactionContract.getTransactionCount();
       setTransactionCount(transactionCount.toNumber());
+      window.location.reload();
     } catch (error) {
       console.log(error);
       throw new Error("No ethereum object.");
