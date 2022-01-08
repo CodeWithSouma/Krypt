@@ -2,7 +2,7 @@
   "name": "web3.0",
   "version": "1.0.0",
   "description": "Krypt - Web 3.0 Blockchain Application",
-  "main": "index.js",
+  "main": "client/src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "cd client/ && npm run dev"
